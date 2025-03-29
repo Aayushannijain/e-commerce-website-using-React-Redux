@@ -5,6 +5,7 @@ const { getStoredItems, storeItems } = require('./data/items');
 
 const app = express();
 
+app.use("/",express.static("../classy-clothes/dist"))
 app.use(bodyParser.json());
 
 app.use((req, res, next) => {
